@@ -1,3 +1,4 @@
 import Navbar from "./Navbar";
-
-export { Navbar };
+import Card from "./Card";
+import Grid from "./Grid"
+export { Navbar , Card , Grid };
