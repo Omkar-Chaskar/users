@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  height: 6rem;
+  height: 4rem;
   background-color: rgb(243, 70, 70);
   text-align: right;
   display: flex;
@@ -24,4 +24,96 @@
   background-color: rgb(243, 70, 70);
   color: aliceblue;
   cursor: pointer;
+}
+
+
+
+.row {
+  font-family: tahoma;
+  display: grid;
+  grid-gap: 16px;
+  padding: 32px;
+}
+
+.col {
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.user {
+  padding: 30px 0 40px;
+  background-color: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.user .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.user .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgb(243, 70, 70);
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.user:hover .picture::before {
+  height: 100%;
+}
+
+.user .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(243, 70, 70);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.user .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.user:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.user .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
 }
