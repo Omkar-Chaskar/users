@@ -1,11 +1,18 @@
 .navbar {
   width: 100%;
-  height: 4rem;
+  height: 10vh;
   background-color: rgb(243, 70, 70);
   text-align: right;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+}
+
+.nav-heading {
+  color: rgb(255, 255, 255);
+  margin: 1rem 3rem;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
 }
 
 .nav-button {
@@ -26,13 +33,19 @@
   cursor: pointer;
 }
 
-
-
 .row {
   font-family: tahoma;
   display: grid;
   grid-gap: 16px;
   padding: 32px;
+}
+
+.row-init{
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 
 .col {
@@ -92,7 +105,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: rgb(243, 70, 70);
+  background-color: #f34646;
   position: absolute;
   top: 0;
   left: 0;
